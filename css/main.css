@@ -1,0 +1,54 @@
+* {
+	/*border: blue solid thin;*/
+	color: grey;
+	text-align: center;
+	background-color: #F8F8F8;
+}
+
+h1 {
+	/*margin: 0px;*/
+	text-align: left;
+	font-size: 1em;
+	overflow: hidden;
+	padding: 15px 0px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-gap: 20px;
+	grid-auto-rows: 150px;
+	justify-content: flex-start;
+}
+
+.card {
+	background-color: white;
+	border: solid thin lightgrey;
+	border-radius: 2px;
+}
+
+/* Media Query for Mobile*/
+@media (min-width: 320px) {
+	.grid {
+		grid-template-columns: 300px;
+	}
+}
+
+/* Media Query on iPad */
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(2, 300px);
+	}
+}
+
+/* Media Query for Desktop */
+@media (min-width: 1024px) {
+	.grid {
+		grid-template-columns: repeat(3, 300px);
+	}
+}
