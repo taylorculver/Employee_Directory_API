@@ -1,54 +1,141 @@
+/*********************************************
+		UNIVERSAL STYLING
+********************************************/
 * {
-	/*border: blue solid thin;*/
-	color: grey;
-	text-align: center;
+	/*border: red thin solid;*/ 
+	font-family: 'Itim', cursive;
+}
+body {
 	background-color: #F8F8F8;
 }
-
-h1 {
-	/*margin: 0px;*/
-	text-align: left;
-	font-size: 1em;
-	overflow: hidden;
-	padding: 15px 0px;
+h2 {
+	color: grey;
+	margin-left: 45px;
 }
-
-.container {
-	margin: 0 auto;
-	width: 90%;
-	text-align: center;
+hr {
+	color: grey;
+	size: 5px;
+	margin: 20px;
 }
-
-.grid {
+img {
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+	max-height: 80px;
+}
+.address,
+.full-name,
+.location {
+	text-transform: capitalize;
+}
+/*********************************************
+		EMPLOYEE CONTACT INFO STYLING
+********************************************/
+.contacts h3 {
+	color: #000;
+}
+.contacts ul { 
+	list-style: none; 
+}
+.contacts ul li { 
+	display: inline; 
+}
+.contacts ul li a {
+	display: block;
+	float: left;
+	padding: 4px;
+	margin-right: 10px;
+	margin-bottom: 7px;
+}
+.contacts .card {
 	display: grid;
-	grid-gap: 20px;
-	grid-auto-rows: 150px;
-	justify-content: flex-start;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	justify-content: space-evenly;
+	border: thin solid lightgrey;
+    width: 300px;
+    height: 125px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.contacts .card .circle {
+	margin: 10px;
+    display: flex;
+	justify-content: center;
+}
+.contacts .card .contact-info * {
+	margin: 0px 10px;
+	padding: 0px;
+}
+.contacts .card .contact-info .email,
+.contacts .card .contact-info .location {
+	font-size: .8em;
+	color: grey;
+}
+.contacts .card .photos a {
+	text-decoration: none;
+	color: grey;
+}
+/*********************************************
+		MODAL STYLING
+********************************************/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.card {
-	background-color: white;
-	border: solid thin lightgrey;
-	border-radius: 2px;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  /*padding: 20px;*/
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 100px 50px grey;
 }
 
-/* Media Query for Mobile*/
-@media (min-width: 320px) {
-	.grid {
-		grid-template-columns: 300px;
-	}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 20px;
 }
 
-/* Media Query on iPad */
-@media (min-width: 768px) {
-	.grid {
-		grid-template-columns: repeat(2, 300px);
-	}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* Media Query for Desktop */
-@media (min-width: 1024px) {
-	.grid {
-		grid-template-columns: repeat(3, 300px);
-	}
+#current {
+	padding: 20px;
+}
+
+#current p {
+	padding: 5px;
+	margin: 0px;
+	color: grey;
+}
+
+#current h3 {
+	padding-top: 10px;
+	margin: 0px;
+}
+
+#current img {
+	max-height: none;
 }
